@@ -2,8 +2,10 @@ package common
 
 import (
 	"bufio"
+	"io"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func ReadInts(path string) []int {
@@ -20,4 +22,13 @@ func ReadInts(path string) []int {
 	}
 
 	return v
+}
+
+func ReadStings(path string) []string {
+	file, _ := os.Open(path)
+	defer file.Close()
+
+	data, _ := io.ReadAll(file)
+
+	return strings.Split(string(data), "\n")
 }
