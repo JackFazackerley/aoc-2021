@@ -12,7 +12,7 @@ func ReadInts(path string) []int {
 	file, _ := os.Open(path)
 	defer file.Close()
 
-	 var v []int
+	var v []int
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
