@@ -23,11 +23,11 @@ func main() {
 
 		switch x[0] {
 		case "forward":
-			xPos+= num
+			xPos += num
 		case "down":
-			yPos+= num
+			yPos += num
 		case "up":
-			yPos-= num
+			yPos -= num
 
 		}
 	}

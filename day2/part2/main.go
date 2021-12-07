@@ -14,7 +14,7 @@ func main() {
 
 	lines := common.ReadStings(absPath)
 
-	depth, aim, zPos := 0, 0 ,0
+	depth, aim, zPos := 0, 0, 0
 
 	for _, line := range lines {
 		x := strings.Split(line, " ")
@@ -23,14 +23,14 @@ func main() {
 
 		switch x[0] {
 		case "forward":
-			zPos+=num
-			depth+=aim*num
+			zPos += num
+			depth += aim * num
 		case "down":
-			aim+=num
+			aim += num
 		case "up":
-			aim-=num
+			aim -= num
 		}
 	}
 
-	fmt.Println(zPos*depth)
+	fmt.Println(zPos * depth)
 }

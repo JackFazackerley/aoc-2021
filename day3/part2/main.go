@@ -19,14 +19,13 @@ func main() {
 	ox, _ := strconv.ParseInt(oxygen, 2, 64)
 	c0, _ := strconv.ParseInt(c02, 2, 64)
 
-
 	fmt.Println(ox)
 	fmt.Println(c0)
 
 	fmt.Println(ox * c0)
 }
 
-func getMost(line[] string, x int) (uint8, uint8) {
+func getMost(line []string, x int) (uint8, uint8) {
 	var one, zero int
 	for _, line := range line {
 		if line[x] == '0' {
