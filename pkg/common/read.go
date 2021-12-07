@@ -32,3 +32,20 @@ func ReadStings(path string) []string {
 
 	return strings.Split(string(data), "\n")
 }
+
+func ReadIntsWithSep(path string, sep string) []int {
+	file, _ := os.Open(path)
+	defer file.Close()
+
+	data, _ := io.ReadAll(file)
+
+	strs := strings.Split(string(data), sep)
+
+	ints := make([]int, len(strs))
+
+	for i, str := range strs {
+		ints[i], _ = strconv.Atoi(str)
+	}
+
+	return ints
+}
